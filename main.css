@@ -1,7 +1,60 @@
-body,
-html {
-  /* height:100%; */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 
-  margin: 0px;
-  padding: 0px;
+#app {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  overflow: visible;
+}
+
+.store-item {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+.store-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.store-item > span {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+footer {
+  padding: 0.5rem 1rem;
+  text-align: center;
 }
